@@ -173,10 +173,45 @@ let newererText = oldererText.replace(/Microsoft/g, "Slavonia");
 
 console.log(newererText);
 
-//concat() joins two or more strings together
+//concat() joins two or more strings together, can basically be used instead of the + operator 
+//"hello" + " world" "Hello.".concat(" ", "World");
 
 let text1 = "My name is";
 let text2 = "Davor The Developer";
 let fullText = text1.concat(" ", text2);
 
 console.log(fullText);
+
+//trim() method removes whitespaces from a string both sides
+
+let whitespaceText = "       Here's a lot of white space        ";
+let noWhiteSpaceText = whitespaceText.trim();
+
+console.log(noWhiteSpaceText);
+
+// ES2019 added the string method trimStart() to javascript, works exactly like trim, but only removes whitespace from the start of the string
+//Similarly works trimEnd() which removes only the space after the string
+
+//padStart() and padEnd() pad a string with another string at the start or at the end
+
+let paddedNum = 5;
+let paddedString = paddedNum.toString();
+let padded = paddedString.padEnd(4, "x");
+
+console.log(padded);
+
+//To access a character from a string we can simply type Property[]
+
+
+let startLetter = text2[0];
+console.log(startLetter);
+
+//this is a new way of selecting the starting characters, the old way was to use charAt(). Whereas property might return undefined if the character is not found, charAt returns an empty string. Property does look like we are accessing an array, but we are not. The property[] is a read only string.
+
+//split() returns the string into an array of characters
+
+let text3 = "Hello World";
+
+let chars = text3.split("");
+
+console.log(chars);
