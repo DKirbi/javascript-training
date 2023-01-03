@@ -215,3 +215,40 @@ let text3 = "Hello World";
 let chars = text3.split("");
 
 console.log(chars);
+
+//Comparisons 
+//Greater/less a < b, a > b
+//Greater/less than or equals a <= b, a >= b
+//Equals a == b
+//Not equals a != b
+
+//Boolean is always the result
+// true means "yes", "correct" or "the truth"
+// false means "no", "wrong" or "not the truth"
+
+console.log( 2 > 1);
+console.log( 2 == 1);
+console.log( 2 != 1);
+
+// a comparison result can be assigned to a variable like any value
+
+let result2 = 5 > 4;
+console.log(result2);
+
+//We can also compare strings, but it is a bit complex
+
+console.log('Glow' > 'Glee'); //true
+
+//In the first one we are guessing if the first string is bigger than the second. What the comparison here does is, it's comparing every letter of its position in the alphabet. 
+//G is the same as G. l is the same as l. Whereas o is greater than e, we stop here, the first string is greater
+//But is A letter bigger than a? No, that's because we are comparing the indexes of internal table encodings of Javascript 
+
+//Comparison of different types
+
+console.log('2' > 1 );
+console.log('01' == 1);
+//When comparing values of different types, javascript converts these values to numbers
+
+//A strict equality operator checks the equality without type conversion
+
+console.log( 0 === false); //false because the types are different
