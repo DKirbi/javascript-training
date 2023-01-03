@@ -103,3 +103,80 @@ console.log(sYmbol);
 console.log(mathematics);
 console.log(nothing);
 console.log(alarm);
+
+
+//An example of interpolation or embedding a string into another string
+const button1 = document.querySelector("button");
+function greet() {
+    const name = prompt("What is your name?");
+
+    alert(`Hello ${name}, nice to see you!`);
+}
+
+button1.addEventListener("click", greet);
+
+const myString = "123";
+const myNum = Number(myString);
+console.log( "this is a " + typeof myNum);
+
+//Here we learned that Number object can turn any stringified number into a number type again. This can be useful when the user writes a number into an input, it is a string, but if we want to use that as a number, we need to convert it into a number first.
+
+const myNum2 = 12345;
+const myString2 = myNum2.toString();
+console.log("this is a " + typeof myString2);
+
+//Here we learned that the toString object, can convert any number into a string
+
+const faveSong = "'T.H.O.R.'";
+const score = 95;
+const highestScore = 100;
+const output = `I like the song ${faveSong}, I gave it a score of ${(score / highestScore) * 100}%.`
+console.log(output);
+
+//slice() extracts a part of a string and returns the extracted part in a new string
+
+let fruit = "apple, banana, kiwi";
+let partOfFruit = fruit.slice(7,13);
+console.log(partOfFruit);
+
+let fruit2 = "apple, banana, kiwi";
+let partOfFruit2 = fruit.slice(-12,-6);
+console.log(partOfFruit);
+
+//Positive values start the count of strings from 0, while the negative values start the count from the end of the string
+
+//substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part
+
+let str3 = "Apple, Coconut, Kiwi";
+let partOfFruit3 = str3.substr(7,7);
+console.log(partOfFruit3);
+
+//replace() is a powerful method that replaces a specified value with another value in a string
+
+let oldText = "Please visit Microsoft!";
+
+let newText = oldText.replace("Microsoft", "Slovenia");
+
+console.log(newText);
+
+//replace() only replaces the first string and is also case sensitive. To replace all the strings the /g flag has to be set, or to ignore the case sensitivity the /i flag has to be set
+
+let olderText = "Please visit Microsofty!"
+
+let newerText = olderText.replace(/MICROSOFTY/i, "Brunšvik");
+
+console.log(newerText);
+
+let oldererText = "Please visit Microsoft and Microsoft and Slovenia.";
+
+let newererText = oldererText.replace(/Microsoft/g, "Slavonia");
+
+console.log(newererText);
+
+//concat() joins two or more strings together
+
+let text1 = "My name is";
+let text2 = "Davor The Developer";
+let fullText = text1.concat(" ", text2);
+
+console.log(fullText);
