@@ -252,3 +252,29 @@ console.log('01' == 1);
 //A strict equality operator checks the equality without type conversion
 
 console.log( 0 === false); //false because the types are different
+
+//if conditionals
+if (new Date().getHours() < 18) {
+    console.log('Good day!')
+} 
+else {
+    console.log('Good evening!');
+}
+
+// If the rules in the parenthesis is true, execute first block of code else, execute the other part
+
+//else if can contain additional rules
+
+const time = new Date().getHours(); //Gets an integer of current hours of the day
+let greeting; //create an empty variable
+if (time < 10) {
+    greeting = "Good morning";
+
+} else if (time < 20) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+
+document.getElementById("greeting").innerHTML = greeting;
+
