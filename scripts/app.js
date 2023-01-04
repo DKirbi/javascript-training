@@ -278,3 +278,44 @@ if (time < 10) {
 
 document.getElementById("greeting").innerHTML = greeting;
 
+//OR operator || can be used in if conditionals for checking multiple values
+
+let hour = 12; 
+let isWeekend = true;
+
+// if(hour < 10 || hour > 18 || isWeekend) {
+//     alert('The office is closed.');
+// }
+
+//The OR operator evaluates operands from left to right, it only stops when it catches a truthy operand, if all the operands are false, the last value is selected
+
+//And operator is respresented with two ampersands &&
+
+let hour2 = 12;
+let minute = 30;
+if(hour2 == 12 && minute == 30) {
+    console.log('The time is 12:30');
+}
+
+//In an if statemenet both operands need to return true, so that the statement will return true, if one of the statements returns false, the result is always false
+
+//The precedence of AND &&  operators is higher than OR || so the code a && b || c && d is esentially the same as if the &&  expressions were in parenthesis (a && b) || (c && d)
+
+// ! (NOT) is the boolean NOT operator represented by the exclamation sign !
+
+//const result3 = !someValue;
+
+//The operator accepts a single argument and does the following: 
+//1. Covnerts the operand to boolean type: true/false
+//2. Returns the inverse value
+
+console.log(!"non-empty string"); //simply converts the value to boolean and inverses it to false
+
+console.log(!!"non-empty string"); // converts the string to a boolean value and double inverses it to true
+
+//A double !! is sometimes used for converting a value to boolean type
+//There is a better way of writing this with the built-in Boolean function
+
+console.log(Boolean("non-empty string")); //returns true
+
+console.log(Boolean(null)); // returns false
