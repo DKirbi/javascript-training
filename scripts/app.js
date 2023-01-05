@@ -319,3 +319,17 @@ console.log(!!"non-empty string"); // converts the string to a boolean value and
 console.log(Boolean("non-empty string")); //returns true
 
 console.log(Boolean(null)); // returns false
+
+//Ternary operators are very short conditionals between true and false, basically the same as an if conditional but it's a lot shorter
+const themeSelection = document.querySelector('.themeSelect');
+const html = document.querySelector('html');
+
+function update(bgColor, textColor) {
+    html.style.backgroundColor = bgColor;
+    html.style.color = textColor;
+}
+
+themeSelection.addEventListener('change', () => themeSelection.value === 'black' 
+? update('black', 'white')
+: update('white', 'black')    
+);
